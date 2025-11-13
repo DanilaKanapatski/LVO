@@ -1,0 +1,129 @@
+.agree {
+    padding-top: 80px;
+}
+
+.agree .container {
+    border-radius: 10px;
+    padding: 32px 24px;
+    background: var(--white);
+}
+
+.agree-title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--blue);
+}
+
+.agree-desc {
+    margin-top: 36px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.agree-list {
+    padding-left: 22px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.agree-list li {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.agree-list li ol {
+    margin-top: 12px;
+    padding-left: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media screen and (max-width: 1297px) {
+    .agree {
+        padding-top: 60px;
+    }
+
+    .agree-title {
+        font-size: 36px;
+    }
+
+    .agree-desc {
+        margin-top: 24px;
+        font-size: 16px;
+    }
+
+    .agree-list {
+        padding-left: 20px;
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .agree-list li {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .agree-list li ol {
+        margin-top: 10px;
+        padding-left: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .agree {
+        padding-top: 70px;
+    }
+
+    .agree-title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        color: var(--blue);
+    }
+
+    .agree-desc {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .agree-list {
+        padding-left: 17px;
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .agree-list li {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .agree-list li ol {
+        margin-top: 8px;
+        padding-left: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
