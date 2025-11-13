@@ -1,0 +1,237 @@
+.request {
+    margin-top: 20px;
+}
+
+.request-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--blue);
+}
+
+.request-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.request-subtitle {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--blue);
+}
+
+.request-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--light-blue);
+}
+
+.request .container {
+    display: flex;
+    gap: 20px;
+}
+
+.request-wrapper {
+    border-radius: 24px;
+    padding: 32px 24px;
+    width: 638px;
+    background: var(--white);
+}
+
+.request-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.request-content h3 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+    color: #000;
+}
+
+.request-content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.request-subtitle__mob {
+    display: none;
+}
+
+.main-btn {
+    margin-top: 20px;
+}
+
+.request-subdesc {
+    display: none;
+}
+
+@media screen and (max-width: 1297px) {
+    .request {
+        margin-top: 10px;
+    }
+
+    .request-title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: var(--blue);
+    }
+
+    .request-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .request-subtitle {
+        display: none;
+    }
+
+    .request-subtitle__mob {
+        display: block;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: var(--blue);
+    }
+
+    .request-desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: var(--light-blue);
+    }
+
+    .request .container {
+        display: block;
+    }
+
+    .request-wrapper {
+        border-radius: 10px;
+        padding: 32px 24px;
+        width: 100%;
+        background: var(--white);
+    }
+
+    .request-content {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .request-content h3 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 110%;
+        color: #000;
+    }
+
+    .request-content p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .main-btn {
+        margin-top: 20px;
+    }
+
+    .send-img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 756px) {
+
+    .request-title {
+       text-align: center;
+    }
+
+    .request-text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .request-subtitle__mob {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: var(--blue);
+    }
+
+    .request-desc {
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: var(--light-blue);
+    }
+
+    .request-wrapper {
+        border-radius: 10px;
+        padding: 30px 16px 16px;
+        width: 100%;
+        background: var(--white);
+    }
+
+    .request-content {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .request-content h3 {
+        font-weight: 500;
+        text-align: center;
+        font-size: 16px;
+        line-height: 110%;
+        color: #000;
+    }
+
+    .request-content p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .main-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .send-img {
+        display: none;
+    }
+
+    .request-subdesc {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}

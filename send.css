@@ -1,0 +1,151 @@
+.send {
+    margin-top: 20px;
+}
+
+.send .container {
+    display: flex;
+    gap: 20px;
+}
+
+.send-wrapper {
+    width: 638px;
+    border-radius: 24px;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--white);
+    gap: 36px;
+}
+
+.send-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--blue);
+}
+
+.main-btn {
+    margin: 0;
+    text-align: left;
+}
+
+.send-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--blue);
+}
+
+.send-img1 {
+    display: none;
+}
+
+@media screen and (max-width: 1297px) {
+    .send {
+        margin-top: 10px;
+    }
+
+    .send-img1 {
+        display: block;
+        position: absolute;
+        right: -155px;
+        top: 12px;
+    }
+
+    .send-img {
+        display: none;
+    }
+
+    .send .container {
+        display: block;
+    }
+
+    .send-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        padding: 32px 24px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: var(--white);
+        gap: 20px;
+    }
+
+    .send-title {
+        max-width: 375px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: normal;
+        color: var(--blue);
+    }
+
+    .main-btn {
+        max-width: 375px;
+        margin-top: 18px;
+        text-align: left;
+    }
+
+    .send-desc {
+        max-width: 375px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: var(--blue);
+    }
+}
+
+@media screen and (max-width: 756px) {
+
+    .send-img1 {
+        display: block;
+        position: absolute;
+        right: auto;
+        width: 100%;
+        left: 0;
+        top: 289px;
+    }
+
+    .send-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: var(--white);
+        gap: 12px;
+        padding-bottom: 167px;
+    }
+
+    .send-title {
+        max-width: 375px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: normal;
+        color: var(--blue);
+    }
+
+    .main-btn {
+        max-width: 375px;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .send-desc {
+        max-width: 375px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: var(--blue);
+    }
+}

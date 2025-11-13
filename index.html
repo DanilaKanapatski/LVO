@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <title>LVO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <img class="header-img" src="assets/images/logo.svg" alt="">
+        <ul class="header-list">
+            <li><a href="#advantages">Преимущества</a></li>
+            <li><a href="#directions">Направления</a></li>
+            <li><a href="#documents">Как подать документы?</a></li>
+            <li><a href="#calculator">Калькулятор</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <a href="#calculator" class="header-btn">Рассчитать стоимость визы</a>
+    </div>
+</header>
+<header class="header-mob">
+    <div class="container"><img src="assets/images/logo.svg" alt="">
+        <div class="header-burger" id="burger"><span></span><span></span><span></span></div>
+        <div class="header-nav" id="header-nav">
+            <ul class="header-list">
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#directions">Направления</a></li>
+                <li><a href="#documents-mob">Как подать документы?</a></li>
+                <li><a href="#calculator">Калькулятор</a></li>
+                <li><a href="#team">Команда</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts-mob">Контакты</a></li>
+            </ul>
+            <ul class="header-social">
+                <li><a href="">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0.35425L9.26002 9.58369C9.26002 9.58369 9.01657 10.2236 8.34778 9.9167L4.33318 6.67799L4.31456 6.66844C4.85684 6.15611 9.06191 2.17804 9.2457 1.99772C9.53021 1.71845 9.35358 1.55219 9.02325 1.76315L2.81183 5.91351L0.415475 5.06516C0.415475 5.06516 0.0383595 4.92402 0.00208007 4.61712C-0.0346767 4.30972 0.427886 4.14347 0.427886 4.14347L10.1971 0.111146C10.1971 0.111146 11 -0.260041 11 0.35425Z"
+                              fill="white"/>
+                    </svg>
+                </a></li>
+                <li><a href="">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0.843533 0.843533C0 1.68707 0 3.0447 0 5.76V6.24C0 8.9553 0 10.3129 0.843533 11.1565C1.68707 12 3.0447 12 5.76 12H6.24C8.9553 12 10.3129 12 11.1565 11.1565C12 10.3129 12 8.9553 12 6.24V5.76C12 3.0447 12 1.68707 11.1565 0.843533C10.3129 0 8.9553 0 6.24 0H5.76C3.0447 0 1.68707 0 0.843533 0.843533ZM2.02503 3.65002C2.09003 6.77002 3.65003 8.64503 6.38503 8.64503H6.54005V6.86002C7.54505 6.96002 8.305 7.69503 8.61 8.64503H10.03C9.64002 7.22503 8.61498 6.44003 7.97498 6.14003C8.61498 5.77003 9.51497 4.87002 9.72997 3.65002H8.43995C8.15995 4.64002 7.33005 5.54002 6.54005 5.62502V3.65002H5.25V7.11002C4.45 6.91002 3.44003 5.94002 3.39503 3.65002H2.02503Z"
+                              fill="white"/>
+                    </svg>
+                </a></li>
+                <li><a href="">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 12L0.843498 8.9185C0.322999 8.0165 0.0494999 6.994 0.0499999 5.9455C0.0514999 2.6675 2.71899 0 5.99649 0C7.58698 0.0005 9.07998 0.62 10.203 1.744C11.3255 2.868 11.9435 4.362 11.943 5.951C11.9415 9.2295 9.27398 11.897 5.99649 11.897C5.00149 11.8965 4.02099 11.647 3.15249 11.173L0 12ZM3.29849 10.0965C4.13649 10.594 4.93649 10.892 5.99449 10.8925C8.71848 10.8925 10.9375 8.6755 10.939 5.95C10.94 3.219 8.73148 1.005 5.99849 1.004C3.27249 1.004 1.055 3.221 1.054 5.946C1.0535 7.0585 1.3795 7.8915 1.927 8.763L1.4275 10.587L3.29849 10.0965ZM8.99198 7.3645C8.95498 7.3025 8.85598 7.2655 8.70698 7.191C8.55848 7.1165 7.82798 6.757 7.69148 6.7075C7.55548 6.658 7.45648 6.633 7.35698 6.782C7.25798 6.9305 6.97298 7.2655 6.88648 7.3645C6.79998 7.4635 6.71298 7.476 6.56448 7.4015C6.41599 7.327 5.93699 7.1705 5.36949 6.664C4.92799 6.27 4.62949 5.7835 4.54299 5.6345C4.45649 5.486 4.53399 5.4055 4.60799 5.3315C4.67499 5.265 4.75649 5.158 4.83099 5.071C4.90649 4.985 4.93099 4.923 4.98099 4.8235C5.03049 4.7245 5.00599 4.6375 4.96849 4.563C4.93099 4.489 4.63399 3.7575 4.51049 3.46C4.38949 3.1705 4.26699 3.2095 4.17599 3.205L3.89099 3.2C3.79199 3.2 3.63099 3.237 3.49499 3.386C3.35899 3.535 2.97499 3.894 2.97499 4.6255C2.97499 5.357 3.50749 6.0635 3.58149 6.1625C3.65599 6.2615 4.62899 7.7625 6.11949 8.406C6.47399 8.559 6.75098 8.6505 6.96648 8.719C7.32248 8.832 7.64648 8.816 7.90248 8.778C8.18798 8.7355 8.78148 8.4185 8.90548 8.0715C9.02948 7.724 9.02948 7.4265 8.99198 7.3645Z"
+                              fill="white"/>
+                    </svg>
+                </a></li>
+                <li><a href="">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.94406 7.46005V8.96005C9.94462 9.0993 9.9161 9.23713 9.86031 9.36472C9.80453 9.49231 9.72271 9.60684 9.6201 9.70098C9.51749 9.79512 9.39635 9.86679 9.26443 9.9114C9.13252 9.95601 8.99274 9.97258 8.85406 9.96005C7.31548 9.79287 5.83756 9.26712 4.53906 8.42505C3.33097 7.65738 2.30673 6.63313 1.53906 5.42505C0.694047 4.12065 0.16818 2.63555 0.00405835 1.09005C-0.0084364 0.951782 0.00799581 0.812429 0.0523086 0.680861C0.0966213 0.549293 0.167844 0.428393 0.261441 0.325859C0.355039 0.223325 0.468961 0.141403 0.595954 0.0853095C0.722947 0.0292158 0.860229 0.000179216 0.999058 4.84762e-05H2.49906C2.74171 -0.00233975 2.97695 0.0835878 3.16094 0.241815C3.34492 0.400042 3.4651 0.619772 3.49906 0.860048C3.56237 1.34008 3.67978 1.81141 3.84906 2.26505C3.91633 2.44401 3.93089 2.63851 3.89101 2.82549C3.85113 3.01247 3.75849 3.1841 3.62406 3.32005L2.98906 3.95505C3.70084 5.20682 4.73729 6.24327 5.98906 6.95505L6.62406 6.32005C6.76 6.18562 6.93164 6.09297 7.11862 6.0531C7.3056 6.01322 7.5001 6.02778 7.67906 6.09505C8.13269 6.26432 8.60403 6.38174 9.08406 6.44505C9.32694 6.47931 9.54876 6.60165 9.70732 6.7888C9.86589 6.97594 9.95014 7.21484 9.94406 7.46005Z"
+                              fill="white"/>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="main">
+        <div class="container">
+            <div class="main-wrapper">
+                <h1 class="main-title">Онлайн-оформление виз в любую страну под ключ
+                </h1>
+                <p class="main-desc">Все сделаем за вас, без присутствия и с гарантией!</p>
+                <a href="#calculator" class="main-btn">Рассчитать стоимость
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 10.0001L15.2946 9.70545L15.5893 10.0001L15.2946 10.2947L15 10.0001ZM5 10.4167C4.76988 10.4167 4.58333 10.2302 4.58333 10.0001C4.58333 9.76996 4.76988 9.58341 5 9.58341V10.0001V10.4167ZM11.6667 6.66675L11.9613 6.37212L15.2946 9.70545L15 10.0001L14.7054 10.2947L11.372 6.96138L11.6667 6.66675ZM15 10.0001L15.2946 10.2947L11.9613 13.628L11.6667 13.3334L11.372 13.0388L14.7054 9.70545L15 10.0001ZM15 10.0001V10.4167H5V10.0001V9.58341H15V10.0001Z"
+                              fill="white"/>
+                    </svg>
+                </a>
+                <ul class="main-list">
+                    <li><span>97%</span>
+                        <p>получают визу с первого раза</p></li>
+                    <li><span>2000+</span>
+                        <p>выданных виз в более чем 40 странах мира</p></li>
+                    <li><span>5+ </span>
+                        <p>лет опыта в сфере визового сопровождения</p></li>
+                    <li><span>9 из 10</span>
+                        <p>наших клиентов приходят по рекомендации</p></li>
+                </ul>
+            </div>
+            <div class="main-img"><img src="assets/images/main-1.png" alt=""></div>
+        </div>
+    </section>
+    <section class="main-mob">
+        <div class="container">
+            <div class="main-wrapper">
+                <picture>
+                    <source media="(max-width: 756px)" srcset="assets/images/main.png"/>
+                    <img src="assets/images/main-2.png" alt=""/>
+                </picture>
+                <p class="main-desc">Онлайн-оформление виз в любую страну под ключ.
+                    Все сделаем за вас, без присутствия и с гарантией!</p>
+            </div>
+            <a href="#calculator" class="main-btn">Рассчитать стоимость визы</a>
+            <ul class="main-list">
+                <li>
+                    <span>97%</span>
+                    <p>получают визу с первого раза</p>
+                </li>
+                <li>
+                    <span>2000+</span>
+                    <p>выданных виз в более чем 40 странах мира</p>
+                </li>
+                <li>
+                    <span>5+ </span>
+                    <p>лет опыта в сфере визового сопровождения</p>
+                </li>
+                <li>
+                    <span>9 из 10</span>
+                    <p>наших клиентов приходят по рекомендации</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <div>
+                <h2 class="form-title">Получить консультацию</h2>
+                <p class="form-desc">Оставьте заявку и мы свяжемся с вами и проконсультируем насчёт визы, а у вас будет
+                    больше времени чтобы собрать чемодан</p></div>
+            <picture class="form-img">
+                <source media="(max-width: 1297px)" srcset="assets/images/form-1.png"/>
+                <img src="assets/images/form.png" alt=""/>
+            </picture>
+            <form class="form-main" action="">
+                <input type="text" placeholder="Страна">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="+ 7 (999) 999 99 99">
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                </label>
+                <button class="form-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    <section class="form-mob">
+        <div class="container">
+            <h2 class="form-title">Получить консультацию</h2>
+            <p class="form-desc">Оставьте заявку и мы свяжемся с вами и проконсультируем насчёт визы
+            <form class="form-main" action="">
+                <input type="text" placeholder="Страна">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="+ 7 (999) 999 99 99">
+            <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+            </label>
+                <button class="form-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="advantages-text">
+                <h2 class="advantages-title">Наши преимущества</h2>
+                <ul class="advantages-list">
+                    <li>
+                        <p>Быстрое оформление документов</p>
+                    </li>
+                    <li>
+                        <p>Если вы не получите визу — мы вернём вам деньги</p>
+                    </li>
+                    <li>
+                        <p>Соберём документы за вас </p>
+                    </li>
+                    <li>
+                        <p>Производите оплату банковской картой на сайте,</p>
+                    </li>
+                    <li>
+                        <p>Получаете визу на свой E-mail.</p>
+                    </li>
+                </ul>
+            </div>
+            <!--            <picture>-->
+            <!--                <source media="(max-width: 768px)" srcset="assets/images/advantages.png" />-->
+            <!--                <source media="(max-width: 1297px)" srcset="assets/images/advantages-2.png" />-->
+            <!--                <img src="assets/images/advantages-1.png" alt="" />-->
+            <!--            </picture>-->
+            <video controls src="assets/images/video.MP4"></video>
+        </div>
+    </section>
+    <section class="directions" id="directions">
+        <div class="container">
+            <h2 class="directions-title">Популярные направления</h2>
+            <ul class="directions-list">
+                <li>
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-1.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-5.png" alt=""/>
+                    </picture>
+                    <h3>Австралия</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-2.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-6.png" alt=""/>
+                    </picture>
+                    <h3>OАЭ</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-3.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-7.png" alt=""/>
+                    </picture>
+                    <h3>Франция</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-4.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-8.png" alt=""/>
+                    </picture>
+                    <h3>Барселона</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="hidden-mobile">
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-4.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-8.png" alt=""/>
+                    </picture>
+                    <h3>Барселона</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="hidden-mobile">
+                    <picture>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-4.png"/>
+                        <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                        <img src="assets/images/directions-8.png" alt=""/>
+                    </picture>
+                    <h3>Барселона</h3>
+                    <a href="#calculator">Рассчитать стоимость
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L9.17678 5.82322L9.35355 6L9.17678 6.17678L9 6ZM3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75V6V6.25ZM7 4L7.17678 3.82322L9.17678 5.82322L9 6L8.82322 6.17678L6.82322 4.17678L7 4ZM9 6L9.17678 6.17678L7.17678 8.17678L7 8L6.82322 7.82322L8.82322 5.82322L9 6ZM9 6V6.25H3V6V5.75H9V6Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <button class="directions-btn">Показать ещё</button>
+        </div>
+    </section>
+    <section class="documents" id="documents">
+        <div class="container">
+            <div class="documents-wrapper"><h2 class="documents-title">Как подать документы?</h2>
+                <picture class="documents-img">
+                    <source media="(max-width: 1297px)" srcset="assets/images/documents-2.svg"/>
+                    <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
+                    <img src="assets/images/documents-1.svg" alt=""/>
+                </picture>
+            </div>
+            <ul class="documents-list">
+                <li>
+                    <span>01</span>
+                    <p>Заявка — вы указываете страну и даты</p>
+                </li>
+                <li>
+                    <span>02</span>
+                    <p>Звонок менеджера — уточняем детали и согласуем решение</p>
+                </li>
+                <li>
+                    <span>03</span>
+                    <p>Мы готовим документы — вы получаете чек-лист</p>
+                </li>
+                <li>
+                    <span>04</span>
+                    <p>Курьер забирает — всё уезжает из дома</p>
+                </li>
+                <li>
+                    <span>05</span>
+                    <p>Биометрия (при необходимости) — согласуем время/место</p>
+                </li>
+                <li>
+                    <span>06</span>
+                    <p>Доставка паспорта — получаете готовую визу домой</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="documents-mob" id="documents-mob">
+        <div class="container">
+            <h2 class="documents-title">Как подать документы?</h2>
+            <ul class="documents-list">
+                <li>
+                    <p>Заявка — вы указываете страну и даты</p>
+
+                </li>
+                <li>
+                    <p>Звонок менеджера — уточняем детали и согласуем решение</p>
+                </li>
+                <li>
+                    <p>Мы готовим документы — вы получаете чек-лист</p>
+                </li>
+                <li>
+                    <p>Курьер забирает — всё уезжает из дома</p>
+                </li>
+                <li>
+                    <p>Биометрия (при необходимости) — согласуем время/место</p>
+                </li>
+                <li>
+                    <p>Доставка паспорта — получаете готовую визу домой</p>
+                </li>
+            </ul>
+            <button class="documents-btn">Рассчитать стоимость визы</button>
+            <img alt="" class="documents-img" src="assets/images/documents.svg">
+        </div>
+    </section>
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <h2 class="calculator-title">Калькулятор стоимости визы</h2>
+                <p class="calculator-desc">Узнайте, во сколько вам обойдётся оформление визы.</p>
+                <form class="calculator-form" action="">
+                    <div class="select-wrapper">
+                        <div class="select-trigger" onclick="toggleDropdown(this)">
+                            <input type="text" placeholder="Направление поездки" readonly>
+                            <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6001 7.4585L11.1668 12.8918C10.5251 13.5335 9.47515 13.5335 8.83348 12.8918L3.40015 7.4585"
+                                      stroke="#3474F6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="dropdown-list">
+                            <!-- Страны Шенгенской зоны -->
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Греция')">Греция</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Испания')">Испания</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Италия')">Италия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Венгрия')">Венгрия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Франция')">Франция</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Австрия')">Австрия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Германия')">Германия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Португалия')">Португалия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Хорватия')">Хорватия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Швейцария')">Швейцария</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Швеция')">Швеция</div>
+
+                            <!-- Страны с национальной визой -->
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Канада')">Канада</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Великобритания')">Великобритания
+                            </div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Болгария')">Болгария</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Кипр')">Кипр</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Япония')">Япония</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Афганистан')">Афганистан</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Алжир')">Алжир</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Иран')">Иран</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Кувейт')">Кувейт</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Туркменистан')">Туркменистан</div>
+
+                            <!-- Страны с электронной визой -->
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Кения')">Кения</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Австралия')">Австралия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Индия')">Индия</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Оман')">Оман</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Южная Корея')">Южная Корея</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Китай')">Китай</div>
+
+                            <!-- Дополнительные страны из вашего примера -->
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Турция')">Турция</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Египет')">Египет</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'ОАЭ')">ОАЭ</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Таиланд')">Таиланд</div>
+                            <div class="dropdown-item" onclick="selectCountry(this, 'Мальдивы')">Мальдивы</div>
+                        </div>
+                    </div>
+                    <input type="number" placeholder="Количество людей ">
+                    <div class="date-input-wrapper">
+                        <input placeholder="Примерные даты поездки" type="date" class="date-input">
+                        <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66675 1.6665V4.1665" stroke="#3474F6" stroke-width="1.5" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.3333 1.6665V4.1665" stroke="#3474F6" stroke-width="1.5" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.91675 7.5752H17.0834" stroke="#3474F6" stroke-width="1.5" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 7.08317V14.1665C17.5 16.6665 16.25 18.3332 13.3333 18.3332H6.66667C3.75 18.3332 2.5 16.6665 2.5 14.1665V7.08317C2.5 4.58317 3.75 2.9165 6.66667 2.9165H13.3333C16.25 2.9165 17.5 4.58317 17.5 7.08317Z"
+                                  stroke="#3474F6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M13.0788 11.4167H13.0863" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M13.0788 13.9167H13.0863" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M9.99632 11.4167H10.0038" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M9.99632 13.9167H10.0038" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6.91185 11.4167H6.91933" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M6.91185 13.9167H6.91933" stroke="#3474F6" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <input placeholder="Имя" type="text">
+                    <input placeholder="+7 999 999 999" type="tel">
+                </form>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                </label>
+                <button class="calculator-btn">Рассчитать стоимость визы</button>
+            </div>
+        </div>
+    </section>
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="team-title">Наша команда</h2>
+            <div class="team-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-1.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Лев</p>
+                            <p class="team-profession">Я создал компанию, чтобы путешествия начинались не со стресса, а
+                                с вдохновения.</p></div>
+                    </div>
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-2.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Оксана</p>
+                            <p class="team-profession">Наш проект LVO создан мечтателями: свободными и счастливыми и мы
+                                точно знаем, что нужно людям для счастья! Присоединяйтесь!</p></div>
+                    </div>
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-3.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Альфия</p>
+                            <p class="team-profession">LVO для меня это путешествия. Любое путешествие как осень: очень
+                                красочно, необыкновенно, красиво, разнообразно и каждый раз удивление и восторг!</p>
+                        </div>
+                    </div>
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-4.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Ксения</p>
+                            <p class="team-profession">Я люблю путешествовать и помогать людям, потому люблю свою работу
+                                и LVO)))</p></div>
+                    </div>
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-5.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Дмитрий</p>
+                            <p class="team-profession">С LVO до мира один шаг</p></div>
+                    </div>
+                </div>
+
+                <!-- Кнопки навигации -->
+                <div class="team-navigation">
+                    <div class="team-button-prev">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.97498 15.0581L2.91664 9.99977L7.97497 4.94144" stroke="white" stroke-width="1.5"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.0833 10L3.05831 10" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="team-button-next">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.025 4.94189L17.0833 10.0002L12.025 15.0586" stroke="white" stroke-width="1.5"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.91666 10H16.9417" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="reviews-title">Отзывы</h2>
+            <div class="reviews-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="review-slide swiper-slide">
+                        <img src="assets/images/reviews-1.png" alt="">
+                        <div class="reviews-text">
+                            <div class="reviews-info"><span class="reviews-name">Лев Грязных</span>
+                                <span class="reviews-country">Малайзия </span></div>
+                            <p class="reviews-desc">Малайзия удивила с первых дней — люди, еда, атмосфера, всё какое‑то
+                                по‑настоящему тёплое.
+                                Успел и погулять по шумным улицам, и отдохнуть у моря. Страна очень разная, но в этом
+                                и есть
+                                её кайф. Захотелось остаться подольше — уж слишком там классно.</p>
+                        </div>
+                    </div>
+                    <div class="review-slide swiper-slide">
+                        <img src="assets/images/reviews-1.png" alt="Анна Петрова">
+                        <div class="reviews-text">
+                            <div class="reviews-info">
+                                <span class="reviews-name">Анна Петрова</span>
+                                <span class="reviews-country">Таиланд</span>
+                            </div>
+                            <p class="reviews-desc">Отличный сервис и быстрая поддержка. Очень довольна работой
+                                алгоритмов, стабильный доход уже несколько месяцев.</p>
+                        </div>
+                    </div>
+                    <div class="review-slide swiper-slide">
+                        <img src="assets/images/reviews-1.png" alt="Иван Сидоров">
+                        <div class="reviews-text">
+                            <div class="reviews-info">
+                                <span class="reviews-name">Иван Сидоров</span>
+                                <span class="reviews-country">Сингапур</span>
+                            </div>
+                            <p class="reviews-desc">Профессиональный подход и качественная аналитика. Рекомендую всем,
+                                кто хочет начать работать с алготрейдингом.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <div class="contacts-logo">
+                    <img src="assets/images/logo.svg" alt="">
+                    <div class="contacts-etc"><a href="">Согласие на обработку персональных данных</a>
+                        <a href="">Политика конфиденциальности</a>
+                        <p>LEGAL VISA ONLINE © 2025</p></div>
+                </div>
+
+
+                <div class="contacts-content">
+                    <div class="contacts-links">
+                        <a href="tel:88007752258">88007752258</a>
+                        <a href="tel:898090097448">89809009744</a>
+                        <a href="mailto:legalvisaonline@gmail.com">legalvisaonline@gmail.com</a></div>
+                    <p class="contacts-desc">623409, РОССИЯ,<br> СВЕРДЛОВСКАЯ ОБЛ,<br> Г КАМЕНСК-УРАЛЬСКИЙ,<br> УЛ
+                        УРИЦКОГО, Д 17, КВ 8</p>
+                    <ul class="contacts-nav">
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#directions">Направления</a></li>
+                        <li><a href="#documents">Как подать документы?</a></li>
+                        <li><a href="#calculator">Калькулятор</a></li>
+                        <li><a href="#team">Команда</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                    <ul class="contacts-list">
+                        <li><a href="https://t.me/legalvisaonline">
+                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 0.35425L9.26002 9.58369C9.26002 9.58369 9.01657 10.2236 8.34778 9.9167L4.33318 6.67799L4.31456 6.66844C4.85684 6.15611 9.06191 2.17804 9.2457 1.99772C9.53021 1.71845 9.35358 1.55219 9.02325 1.76315L2.81183 5.91351L0.415475 5.06516C0.415475 5.06516 0.0383595 4.92402 0.00208007 4.61712C-0.0346767 4.30972 0.427886 4.14347 0.427886 4.14347L10.1971 0.111146C10.1971 0.111146 11 -0.260041 11 0.35425Z"
+                                      fill="white"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://vk.com/legalvisaonline">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0.843533 0.843533C0 1.68707 0 3.0447 0 5.76V6.24C0 8.9553 0 10.3129 0.843533 11.1565C1.68707 12 3.0447 12 5.76 12H6.24C8.9553 12 10.3129 12 11.1565 11.1565C12 10.3129 12 8.9553 12 6.24V5.76C12 3.0447 12 1.68707 11.1565 0.843533C10.3129 0 8.9553 0 6.24 0H5.76C3.0447 0 1.68707 0 0.843533 0.843533ZM2.02503 3.65002C2.09003 6.77002 3.65003 8.64503 6.38503 8.64503H6.54005V6.86002C7.54505 6.96002 8.305 7.69503 8.61 8.64503H10.03C9.64002 7.22503 8.61498 6.44003 7.97498 6.14003C8.61498 5.77003 9.51497 4.87002 9.72997 3.65002H8.43995C8.15995 4.64002 7.33005 5.54002 6.54005 5.62502V3.65002H5.25V7.11002C4.45 6.91002 3.44003 5.94002 3.39503 3.65002H2.02503Z"
+                                      fill="white"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12L0.843498 8.9185C0.322999 8.0165 0.0494999 6.994 0.0499999 5.9455C0.0514999 2.6675 2.71899 0 5.99649 0C7.58698 0.0005 9.07998 0.62 10.203 1.744C11.3255 2.868 11.9435 4.362 11.943 5.951C11.9415 9.2295 9.27398 11.897 5.99649 11.897C5.00149 11.8965 4.02099 11.647 3.15249 11.173L0 12ZM3.29849 10.0965C4.13649 10.594 4.93649 10.892 5.99449 10.8925C8.71848 10.8925 10.9375 8.6755 10.939 5.95C10.94 3.219 8.73148 1.005 5.99849 1.004C3.27249 1.004 1.055 3.221 1.054 5.946C1.0535 7.0585 1.3795 7.8915 1.927 8.763L1.4275 10.587L3.29849 10.0965ZM8.99198 7.3645C8.95498 7.3025 8.85598 7.2655 8.70698 7.191C8.55848 7.1165 7.82798 6.757 7.69148 6.7075C7.55548 6.658 7.45648 6.633 7.35698 6.782C7.25798 6.9305 6.97298 7.2655 6.88648 7.3645C6.79998 7.4635 6.71298 7.476 6.56448 7.4015C6.41599 7.327 5.93699 7.1705 5.36949 6.664C4.92799 6.27 4.62949 5.7835 4.54299 5.6345C4.45649 5.486 4.53399 5.4055 4.60799 5.3315C4.67499 5.265 4.75649 5.158 4.83099 5.071C4.90649 4.985 4.93099 4.923 4.98099 4.8235C5.03049 4.7245 5.00599 4.6375 4.96849 4.563C4.93099 4.489 4.63399 3.7575 4.51049 3.46C4.38949 3.1705 4.26699 3.2095 4.17599 3.205L3.89099 3.2C3.79199 3.2 3.63099 3.237 3.49499 3.386C3.35899 3.535 2.97499 3.894 2.97499 4.6255C2.97499 5.357 3.50749 6.0635 3.58149 6.1625C3.65599 6.2615 4.62899 7.7625 6.11949 8.406C6.47399 8.559 6.75098 8.6505 6.96648 8.719C7.32248 8.832 7.64648 8.816 7.90248 8.778C8.18798 8.7355 8.78148 8.4185 8.90548 8.0715C9.02948 7.724 9.02948 7.4265 8.99198 7.3645Z"
+                                      fill="white"/>
+                            </svg>
+                        </a></li>
+                        <!--                    <li><a href=""><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                        <!--                        <path d="M9.94406 7.46005V8.96005C9.94462 9.0993 9.9161 9.23713 9.86031 9.36472C9.80453 9.49231 9.72271 9.60684 9.6201 9.70098C9.51749 9.79512 9.39635 9.86679 9.26443 9.9114C9.13252 9.95601 8.99274 9.97258 8.85406 9.96005C7.31548 9.79287 5.83756 9.26712 4.53906 8.42505C3.33097 7.65738 2.30673 6.63313 1.53906 5.42505C0.694047 4.12065 0.16818 2.63555 0.00405835 1.09005C-0.0084364 0.951782 0.00799581 0.812429 0.0523086 0.680861C0.0966213 0.549293 0.167844 0.428393 0.261441 0.325859C0.355039 0.223325 0.468961 0.141403 0.595954 0.0853095C0.722947 0.0292158 0.860229 0.000179216 0.999058 4.84762e-05H2.49906C2.74171 -0.00233975 2.97695 0.0835878 3.16094 0.241815C3.34492 0.400042 3.4651 0.619772 3.49906 0.860048C3.56237 1.34008 3.67978 1.81141 3.84906 2.26505C3.91633 2.44401 3.93089 2.63851 3.89101 2.82549C3.85113 3.01247 3.75849 3.1841 3.62406 3.32005L2.98906 3.95505C3.70084 5.20682 4.73729 6.24327 5.98906 6.95505L6.62406 6.32005C6.76 6.18562 6.93164 6.09297 7.11862 6.0531C7.3056 6.01322 7.5001 6.02778 7.67906 6.09505C8.13269 6.26432 8.60403 6.38174 9.08406 6.44505C9.32694 6.47931 9.54876 6.60165 9.70732 6.7888C9.86589 6.97594 9.95014 7.21484 9.94406 7.46005Z" fill="white" />-->
+                        <!--                    </svg></a></li>-->
+
+                    </ul>
+                    <a class="contacts-agency" href="t.me/bobriashovmatv"><img src="assets/images/agency.svg"
+                                                                               alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts-mob" id="contacts-mob">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <img src="assets/images/logo.svg" alt="">
+                <ul class="contacts-list">
+                    <li><a href="https://t.me/legalvisaonline">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 0.35425L9.26002 9.58369C9.26002 9.58369 9.01657 10.2236 8.34778 9.9167L4.33318 6.67799L4.31456 6.66844C4.85684 6.15611 9.06191 2.17804 9.2457 1.99772C9.53021 1.71845 9.35358 1.55219 9.02325 1.76315L2.81183 5.91351L0.415475 5.06516C0.415475 5.06516 0.0383595 4.92402 0.00208007 4.61712C-0.0346767 4.30972 0.427886 4.14347 0.427886 4.14347L10.1971 0.111146C10.1971 0.111146 11 -0.260041 11 0.35425Z"
+                                  fill="white"/>
+                        </svg>
+                    </a></li>
+                    <li><a href="https://vk.com/legalvisaonline">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M0.843533 0.843533C0 1.68707 0 3.0447 0 5.76V6.24C0 8.9553 0 10.3129 0.843533 11.1565C1.68707 12 3.0447 12 5.76 12H6.24C8.9553 12 10.3129 12 11.1565 11.1565C12 10.3129 12 8.9553 12 6.24V5.76C12 3.0447 12 1.68707 11.1565 0.843533C10.3129 0 8.9553 0 6.24 0H5.76C3.0447 0 1.68707 0 0.843533 0.843533ZM2.02503 3.65002C2.09003 6.77002 3.65003 8.64503 6.38503 8.64503H6.54005V6.86002C7.54505 6.96002 8.305 7.69503 8.61 8.64503H10.03C9.64002 7.22503 8.61498 6.44003 7.97498 6.14003C8.61498 5.77003 9.51497 4.87002 9.72997 3.65002H8.43995C8.15995 4.64002 7.33005 5.54002 6.54005 5.62502V3.65002H5.25V7.11002C4.45 6.91002 3.44003 5.94002 3.39503 3.65002H2.02503Z"
+                                  fill="white"/>
+                        </svg>
+                    </a></li>
+                    <li><a href="">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 12L0.843498 8.9185C0.322999 8.0165 0.0494999 6.994 0.0499999 5.9455C0.0514999 2.6675 2.71899 0 5.99649 0C7.58698 0.0005 9.07998 0.62 10.203 1.744C11.3255 2.868 11.9435 4.362 11.943 5.951C11.9415 9.2295 9.27398 11.897 5.99649 11.897C5.00149 11.8965 4.02099 11.647 3.15249 11.173L0 12ZM3.29849 10.0965C4.13649 10.594 4.93649 10.892 5.99449 10.8925C8.71848 10.8925 10.9375 8.6755 10.939 5.95C10.94 3.219 8.73148 1.005 5.99849 1.004C3.27249 1.004 1.055 3.221 1.054 5.946C1.0535 7.0585 1.3795 7.8915 1.927 8.763L1.4275 10.587L3.29849 10.0965ZM8.99198 7.3645C8.95498 7.3025 8.85598 7.2655 8.70698 7.191C8.55848 7.1165 7.82798 6.757 7.69148 6.7075C7.55548 6.658 7.45648 6.633 7.35698 6.782C7.25798 6.9305 6.97298 7.2655 6.88648 7.3645C6.79998 7.4635 6.71298 7.476 6.56448 7.4015C6.41599 7.327 5.93699 7.1705 5.36949 6.664C4.92799 6.27 4.62949 5.7835 4.54299 5.6345C4.45649 5.486 4.53399 5.4055 4.60799 5.3315C4.67499 5.265 4.75649 5.158 4.83099 5.071C4.90649 4.985 4.93099 4.923 4.98099 4.8235C5.03049 4.7245 5.00599 4.6375 4.96849 4.563C4.93099 4.489 4.63399 3.7575 4.51049 3.46C4.38949 3.1705 4.26699 3.2095 4.17599 3.205L3.89099 3.2C3.79199 3.2 3.63099 3.237 3.49499 3.386C3.35899 3.535 2.97499 3.894 2.97499 4.6255C2.97499 5.357 3.50749 6.0635 3.58149 6.1625C3.65599 6.2615 4.62899 7.7625 6.11949 8.406C6.47399 8.559 6.75098 8.6505 6.96648 8.719C7.32248 8.832 7.64648 8.816 7.90248 8.778C8.18798 8.7355 8.78148 8.4185 8.90548 8.0715C9.02948 7.724 9.02948 7.4265 8.99198 7.3645Z"
+                                  fill="white"/>
+                        </svg>
+                    </a></li>
+<!--                    <li><a href="">-->
+<!--                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path d="M9.94406 7.46005V8.96005C9.94462 9.0993 9.9161 9.23713 9.86031 9.36472C9.80453 9.49231 9.72271 9.60684 9.6201 9.70098C9.51749 9.79512 9.39635 9.86679 9.26443 9.9114C9.13252 9.95601 8.99274 9.97258 8.85406 9.96005C7.31548 9.79287 5.83756 9.26712 4.53906 8.42505C3.33097 7.65738 2.30673 6.63313 1.53906 5.42505C0.694047 4.12065 0.16818 2.63555 0.00405835 1.09005C-0.0084364 0.951782 0.00799581 0.812429 0.0523086 0.680861C0.0966213 0.549293 0.167844 0.428393 0.261441 0.325859C0.355039 0.223325 0.468961 0.141403 0.595954 0.0853095C0.722947 0.0292158 0.860229 0.000179216 0.999058 4.84762e-05H2.49906C2.74171 -0.00233975 2.97695 0.0835878 3.16094 0.241815C3.34492 0.400042 3.4651 0.619772 3.49906 0.860048C3.56237 1.34008 3.67978 1.81141 3.84906 2.26505C3.91633 2.44401 3.93089 2.63851 3.89101 2.82549C3.85113 3.01247 3.75849 3.1841 3.62406 3.32005L2.98906 3.95505C3.70084 5.20682 4.73729 6.24327 5.98906 6.95505L6.62406 6.32005C6.76 6.18562 6.93164 6.09297 7.11862 6.0531C7.3056 6.01322 7.5001 6.02778 7.67906 6.09505C8.13269 6.26432 8.60403 6.38174 9.08406 6.44505C9.32694 6.47931 9.54876 6.60165 9.70732 6.7888C9.86589 6.97594 9.95014 7.21484 9.94406 7.46005Z"-->
+<!--                                  fill="white"/>-->
+<!--                        </svg>-->
+<!--                    </a></li>-->
+                </ul>
+            </div>
+            <div class="contacts-content">
+                <div class="contacts-links"><a href="tel:88007752258">88007752258</a><a href="tel:898090097448">89809009744</a>
+                    <a href="mailto:legalvisaonline@gmail.com">legalvisaonline@gmail.com</a></div>
+                <p class="contacts-desc">623409, РОССИЯ, СВЕРДЛОВСКАЯ ОБЛ, Г КАМЕНСК-УРАЛЬСКИЙ, УЛ УРИЦКОГО, Д 17, КВ
+                    8</p>
+                <ul class="contacts-nav">
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#directions">Направления</a></li>
+                    <li><a href="#documents">Как подать документы?</a></li>
+                    <li><a href="#calculator">Калькулятор</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="contacts-etc">
+                    <a class="contacts-agency" href="t.me/bobriashovmatv"><img src="assets/images/agency.svg" alt=""></a>
+                    <a href="agree.html">Согласие на обработку персональных данных</a>
+                    <a href="politics.html">Политика конфиденциальности</a>
+                    <p>LEGAL VISA ONLINE © 2025</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="header.js"></script>
+<script src="team.js"></script>
+<script src="reviews.js"></script>
+</body>
+</html>
