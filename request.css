@@ -1,5 +1,5 @@
 .request {
-    margin-top: 20px;
+    padding-top: 80px;
 }
 
 .request-title {
@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 1297px) {
     .request {
-        margin-top: 10px;
+        padding-top: 70px;
     }
 
     .request-title {
