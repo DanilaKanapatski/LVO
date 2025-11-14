@@ -304,6 +304,9 @@ html {
 }
 
 .advantages-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 531px;
     margin-bottom: 0;
     background: var(--white);
@@ -933,79 +936,69 @@ html {
 }
 
 .reviews-slider {
-    margin-top: 12px;
-    background: var(--white);
-    border-radius: 10px;
+    margin-top: 24px;
     width: 100%;
     max-width: 1300px; /* Фиксируем ширину */
-    padding: 10px 24px 10px 10px !important;
+    padding-bottom: 24px !important;
 }
 
 .reviews-slide {
-    width: 100%;
+    width: 427px !important;
+
 }
 
 .review-slide {
-    display: flex !important;
-    gap: 28px;
-}
-
-.review-slide img {
-    width: 643px;
-    border-radius: 14px;
+    width: 427px !important;
+    height: 309px !important;
+    background: var(--white);border-radius: 15px;
+    padding: 16px 16px 24px;
 }
 
 .reviews-text {
-    margin-top: 28px;
-    max-width: 595px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100% !important;
+    height: 100%;
 }
 
 .reviews-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 11px;
 }
 
 .reviews-name {
     font-weight: 500;
-    font-size: 46px;
+    font-size: 36px;
     line-height: 96%;
-    text-align: center;
     color: var(--blue);
     font-family: "Onest", sans-serif;
 }
 
 .reviews-country {
-    background: var(--gray);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    color: var(--blue);
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-family: "Onest", sans-serif;
-    display: block;
+    font-size: 18px;
+    line-height: 96%;
+    color: var(--light-blue);
 }
 
 .reviews-desc {
-    margin-top: 179px;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     color: var(--blue);
-    font-family: "Onest", sans-serif;
-    margin-bottom: 28px;
 }
 
 .swiper-pagination {
-    text-align: right !important;
-    right: 288px !important;
-    left: auto !important;
+    /*text-align: right !important;*/
+    /*right: auto !important;*/
+    /*left: auto !important;*/
+    bottom: 0 !important;
 }
 
 .swiper-pagination-bullet {
-    width: 46px !important;
+    width: 44px !important;
     height: 2px !important;
     background: var(--blue) !important;
     border-radius: 10px !important;
@@ -1763,9 +1756,7 @@ html {
         padding: 10px 0;
     }
 
-    .form-main .custom-checkbox {
-        color: var(--gray);
-    }
+
 
     /*team*/
 
@@ -2091,6 +2082,10 @@ html {
 
     .header-mob img {
         width: 67px;
+    }
+
+    .form-main .custom-checkbox {
+        color: var(--gray);
     }
 
     .header-burger {

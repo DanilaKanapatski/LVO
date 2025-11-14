@@ -5,6 +5,7 @@ new Swiper('.reviews-slider', {
     // },
     slidesPerView: 1, // Показываем только один слайд
     spaceBetween: 12, // Добавляем расстояние 10px между слайдами
+    slidesPerGroup: 1,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -19,7 +20,8 @@ new Swiper('.reviews-slider', {
         //     spaceBetween: 10
         // },
         1200: {
-            spaceBetween: 24,
+            slidesPerView: 3,
+            spaceBetween: 10,
         }
     }
 });
