@@ -53,6 +53,13 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+.agree .container .normal > li{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
 @media screen and (max-width: 1297px) {
     .agree {
         padding-top: 60px;
@@ -75,7 +82,21 @@
         gap: 10px;
     }
 
-    .agree-list li {
+    .agree-list > li {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .agree-list li ol li {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .agree .container .normal > li{
         font-weight: 500;
         font-size: 16px;
         line-height: 120%;
@@ -119,7 +140,21 @@
         gap: 8px;
     }
 
-    .agree-list li {
+    .agree-list > li {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .agree-list li ol li{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .agree .container .normal > li{
         font-weight: 500;
         font-size: 14px;
         line-height: 120%;
