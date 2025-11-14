@@ -670,14 +670,18 @@ html {
 .dropdown-list::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8;
 }
-
 .date-input-wrapper {
     position: relative;
     width: 100%;
+    max-width: 100%; /* Добавляем ограничение */
 }
 
 .calculator-form .date-input {
     cursor: pointer;
+    width: 100%; /* Явно указываем ширину */
+    box-sizing: border-box; /* Важно для правильного расчета */
+    -webkit-appearance: none; /* Убираем стандартные стили Safari */
+    appearance: none;
 }
 
 .date-input.placeholder-shown {
@@ -692,13 +696,13 @@ html {
     color: var(--light-blue);
 }
 
-/* Скрываем стандартную иконку календаря в некоторых браузерах */
+/* Единый стиль для скрытия календарной иконки */
 .date-input::-webkit-calendar-picker-indicator {
     opacity: 0;
     position: absolute;
     right: 20px;
-    width: 20px;
-    height: 20px;
+    width: 100%; /* Занимаем всю область */
+    height: 100%;
     cursor: pointer;
     z-index: 2;
 }
@@ -708,22 +712,36 @@ html {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none; /* Чтобы клик проходил через иконку к инпуту */
+    pointer-events: none;
     z-index: 1;
 }
 
-/* Для Firefox */
+/* Убираем стандартные стили для разных браузеров */
 .date-input {
-    -moz-appearance: textfield;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .date-input::-moz-focus-inner {
     border: 0;
+    padding: 0; /* Добавляем для Firefox */
 }
 
-/* Для IE */
 .date-input::-ms-clear {
     display: none;
+}
+
+/* Для Safari добавляем дополнительные стили */
+@supports (-webkit-overflow-scrolling: touch) {
+    .date-input {
+        font-size: 16px; /* Предотвращает зум в iOS */
+        min-height: 44px; /* Минимальная высота для тач-устройств */
+    }
+
+    .date-input-wrapper {
+        overflow: hidden; /* Предотвращает выход за границы */
+    }
 }
 
 .calculator-btn {
@@ -2265,6 +2283,7 @@ html {
     }
 
     .form-title {
+        margin: 0 auto;
         font-weight: 500;
         font-size: 28px;
         line-height: 100%;
@@ -2273,12 +2292,13 @@ html {
     }
 
     .form-desc {
-        margin-top: 20px;
+        margin: 20px auto 0;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
         text-align: center;
         color: var(--white);
+        max-width: none;
     }
 
     .form-main {
@@ -2286,6 +2306,7 @@ html {
         display: flex;
         flex-direction: column;
         gap: 2px;
+        max-width: none;
     }
 
     .form-main input {
@@ -2297,6 +2318,7 @@ html {
         border-radius: 10px;
         padding: 10px 20px;
         height: 52px;
+        width: 100%;
     }
 
     .form-btn {
@@ -2717,76 +2739,64 @@ html {
 
     .reviews-slider {
         margin-top: 12px;
-        background: var(--white);
-        border-radius: 10px;
         width: 100%;
         /*max-width: 370px; !* Фиксируем ширину *!*/
-        padding: 16px 11px !important;
     }
 
     .reviews-slide {
-        width: 100%;
-        display: block !important;
+        width: 100% !important;
+
+    }
+
+    .review-slide {
+        width: 100% !important;
+        height: 233px !important;
+        border-radius: 15px;
+        padding: 16px 16px 24px;
+        background: var(--white);
     }
 
     .reviews-text {
-        margin-top: 32px;
-        max-width: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100% !important;
-    }
-
-    .review-slide img {
-        width: 100%;
-        border-radius: 0;
+        height: 100%;
     }
 
     .reviews-info {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .review-slide {
-        display: block !important;
+        flex-direction: column;
+        gap: 11px;
     }
 
     .reviews-name {
         font-weight: 500;
         font-size: 24px;
         line-height: 96%;
-        text-align: center;
         color: var(--blue);
         font-family: "Onest", sans-serif;
     }
 
     .reviews-country {
-        background: var(--gray);
         font-weight: 400;
-        font-size: 12px;
-        line-height: 120%;
-        color: var(--blue);
-        border-radius: 2px;
-        padding: 6px 8px;
-        font-family: "Onest", sans-serif;
-        display: block;
+        font-size: 18px;
+        line-height: 96%;
+        color: var(--light-blue);
     }
 
     .reviews-desc {
-        margin-top: 12px;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
         color: var(--blue);
-        font-family: "Onest", sans-serif;
-        margin-bottom: 32px;
     }
 
-    .swiper-pagination-bullet {
-        width: 46px !important;
-        height: 2px !important;
-        background: var(--blue) !important;
-        border-radius: 10px !important;
-        opacity: 0.4 !important;
+    .swiper-pagination {
+        /*text-align: right !important;*/
+        /*right: auto !important;*/
+        /*left: auto !important;*/
+        bottom: 0 !important;
     }
 
     .swiper-pagination-bullet-active {
