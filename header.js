@@ -178,3 +178,30 @@ document.querySelectorAll('.date-input').forEach(input => {
         input.classList.add('placeholder-shown');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('myVideo');
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1297) {
+        video.poster = 'assets/images/video.png';
+    } else if (screenWidth >= 768) {
+        video.poster = 'assets/images/video1.png';
+    } else {
+        video.poster = 'assets/images/video2.png';
+    }
+});
+
+// Обновление при изменении размера окна
+window.addEventListener('resize', function() {
+    const video = document.getElementById('myVideo');
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1297) {
+        video.poster = 'assets/images/video.png';
+    } else if (screenWidth >= 768) {
+        video.poster = 'assets/images/video1.png';
+    } else {
+        video.poster = 'assets/images/video2.png';
+    }
+});

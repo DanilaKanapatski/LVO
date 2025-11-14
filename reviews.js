@@ -14,11 +14,11 @@ new Swiper('.reviews-slider', {
         },
     },
     breakpoints: {
-        // Адаптив для мобильных устройств
-        // 320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 10
-        // },
+        769: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 10
+        },
         1200: {
             slidesPerView: 3,
             spaceBetween: 10,
