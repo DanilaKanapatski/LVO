@@ -169,3 +169,17 @@ body {
         width: 100%;
     }
 }
+
+#myVideo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+    #myVideo {
+        width: 100% !important;
+        height: auto;
+    }
+}
