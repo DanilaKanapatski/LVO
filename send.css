@@ -1,5 +1,5 @@
 .send {
-    margin-top: 20px;
+    padding-top: 80px;
 }
 
 .send .container {
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 1297px) {
     .send {
-        margin-top: 10px;
+        padding-top: 70px;
     }
 
     .send-img1 {
@@ -107,7 +107,7 @@
         right: auto;
         width: 100%;
         left: 0;
-        top: 289px;
+        top: 68%;
     }
 
     .send-wrapper {
@@ -125,7 +125,7 @@
     }
 
     .send-title {
-        max-width: 375px;
+        max-width: none;
         text-align: center;
         font-weight: 500;
         font-size: 36px;
@@ -135,13 +135,15 @@
     }
 
     .main-btn {
-        max-width: 375px;
+        max-width: none;
+        width: 100%;
         margin-top: 12px;
         text-align: left;
     }
 
     .send-desc {
-        max-width: 375px;
+        max-width: none;
+        width: 100%;
         text-align: center;
         font-weight: 400;
         font-size: 16px;
