@@ -1,35 +1,88 @@
 const menu = document.getElementById('header-nav');
 const burger = document.getElementById('burger');
 
-// Открытие/закрытие бургер-меню
+// Создаем элемент для затемнения фона
+const overlay = document.createElement('div');
+overlay.className = 'menu-overlay';
+document.body.appendChild(overlay);
+
+// Добавляем стили для затемнения (можно также вынести в CSS)
+overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 998; // Ниже меню, но выше остального контента
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+`;
+
+// Обновляем функцию открытия/закрытия меню
 burger.addEventListener("click", function () {
     menu.classList.toggle("active");
     burger.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        overlay.style.display = 'block';
+        setTimeout(() => {
+            overlay.style.opacity = '1';
+        }, 10);
+    } else {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
+    }
 });
 
-// Закрытие меню при клике на ссылки внутри меню
+// Обновляем функцию закрытия при клике на ссылки
 const menuLinks = menu.querySelectorAll('a');
 menuLinks.forEach(link => {
     link.addEventListener('click', function() {
         menu.classList.remove("active");
         burger.classList.remove("active");
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
     });
 });
 
-// Закрытие меню при клике вне меню
+// Обновляем функцию закрытия при клике вне меню
 document.addEventListener('click', function(e) {
     if (!menu.contains(e.target) && !burger.contains(e.target)) {
         menu.classList.remove("active");
         burger.classList.remove("active");
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
     }
 });
 
-// Закрытие меню при нажатии Escape
+// Обновляем функцию закрытия при нажатии Escape
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         menu.classList.remove("active");
         burger.classList.remove("active");
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
     }
+});
+
+// Закрытие при клике на сам оверлей
+overlay.addEventListener('click', function() {
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 300);
 });
 
 // Функция для открытия/закрытия выпадающего списка

@@ -1099,8 +1099,10 @@ html {
 }
 
 .contacts-etc {
+    max-width: 636px;
     margin-top: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
     font-weight: 400;
@@ -1108,6 +1110,10 @@ html {
     line-height: 120%;
     color: var(--light-blue);
     opacity: 0.7;
+}
+
+.contacts-etc p {
+    width: 100%;
 }
 
 .contacts-logo {
@@ -1211,7 +1217,7 @@ html {
         z-index: 2;
         width: 100%;
         position: absolute;
-        top: 68px;
+        top: 58px;
         left: 0;
         border-radius: 10px;
         padding: 12px 16px;
@@ -2076,7 +2082,7 @@ html {
         padding: 12px 16px;
         display: flex;
         justify-content: space-between;
-        max-width: 450px;
+        /*max-width: 450px;*/
         margin: 0 auto; /* Центрируем */
         width: 100%;
         box-sizing: border-box;
@@ -2135,7 +2141,7 @@ html {
         z-index: 2;
         width: 100%;
         position: absolute;
-        top: 68px;
+        top: 58px;
         left: 0;
         border-radius: 10px;
         padding: 12px 16px;
