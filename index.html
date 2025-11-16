@@ -77,7 +77,7 @@
             <div class="main-wrapper">
                 <h1 class="main-title">Онлайн-оформление виз в любую страну под ключ
                 </h1>
-<!--                <p class="main-desc">Все сделаем за вас, без присутствия и с гарантией!</p>-->
+                <!--                <p class="main-desc">Все сделаем за вас, без присутствия и с гарантией!</p>-->
                 <a href="#calculator" class="main-btn">Рассчитать стоимость
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 10.0001L15.2946 9.70545L15.5893 10.0001L15.2946 10.2947L15 10.0001ZM5 10.4167C4.76988 10.4167 4.58333 10.2302 4.58333 10.0001C4.58333 9.76996 4.76988 9.58341 5 9.58341V10.0001V10.4167ZM11.6667 6.66675L11.9613 6.37212L15.2946 9.70545L15 10.0001L14.7054 10.2947L11.372 6.96138L11.6667 6.66675ZM15 10.0001L15.2946 10.2947L11.9613 13.628L11.6667 13.3334L11.372 13.0388L14.7054 9.70545L15 10.0001ZM15 10.0001V10.4167H5V10.0001V9.58341H15V10.0001Z"
@@ -106,7 +106,7 @@
                     <img src="assets/images/main-2.png" alt=""/>
                 </picture>
                 <p class="main-desc">Онлайн-оформление виз в любую страну под ключ.
-                    </p>
+                </p>
             </div>
             <a href="#calculator" class="main-btn">Рассчитать стоимость визы</a>
             <ul class="main-list">
@@ -146,7 +146,9 @@
                 <label class="custom-checkbox">
                     <input type="checkbox" name="agreement" required>
                     <span class="checkmark"></span>
-                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                    <span>Я даю согласие на <a href="agree.html">обработку персональных данных</a> и принимаю <a
+                            href="politics.html">Политику
+                        конфиденциальности</a></span>
                 </label>
                 <button type="submit" class="form-btn">Отправить заявку</button>
             </form>
@@ -163,7 +165,9 @@
                 <label class="custom-checkbox">
                     <input type="checkbox" name="agreement" required>
                     <span class="checkmark"></span>
-                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                    Я даю согласие на <a href="agree.html">обработку персональных данных</a> и принимаю <a
+                        href="politics.html">Политику
+                    конфиденциальности</a>
                 </label>
                 <button type="submit" class="form-btn">Отправить заявку</button>
             </form>
@@ -373,6 +377,12 @@
                             </svg>
                         </div>
                         <div class="dropdown-list">
+                            <!-- Поле поиска -->
+                            <div class="search-container">
+                                <input type="text" class="country-search" placeholder="Найти страну"
+                                       oninput="filterCountries(this.value)">
+
+                            </div>
                             <!-- Страны Шенгенской зоны -->
                             <div class="dropdown-item" onclick="selectCountry(this, 'Греция')">Греция</div>
                             <div class="dropdown-item" onclick="selectCountry(this, 'Испания')">Испания</div>
@@ -449,7 +459,9 @@
                 <label class="custom-checkbox">
                     <input type="checkbox">
                     <span class="checkmark"></span>
-                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                    Я даю согласие на <a href="agree.html">обработку персональных данных</a> и принимаю <a
+                        href="politics.html">Политику
+                    конфиденциальности</a>
                 </label>
                 <button class="calculator-btn">Рассчитать стоимость визы</button>
             </div>
@@ -499,7 +511,8 @@
                         <img src="assets/images/team-6.png" alt="Лев Грязных">
                         <div class="team-wrapper">
                             <p class="team-name">Виталий</p>
-                            <p class="team-profession">Когда люди смотрят на летящих в небе птиц,их всякий раз тянет отправиться в путешествие</p></div>
+                            <p class="team-profession">Когда люди смотрят на летящих в небе птиц,их всякий раз тянет
+                                отправиться в путешествие</p></div>
                     </div>
                 </div>
 
@@ -535,7 +548,8 @@
                             <div class="reviews-info">
                                 <span class="reviews-name">Карина Легкова</span>
                                 <span class="reviews-country">5 ноября 2025</span></div>
-                            <p class="reviews-desc">Делала визу в этой фирме. Все быстро и просто все сделали за меня. И не дорого. Советую обращаться!</p>
+                            <p class="reviews-desc">Делала визу в этой фирме. Все быстро и просто все сделали за меня. И
+                                не дорого. Советую обращаться!</p>
                         </div>
                     </div>
                     <div class="review-slide swiper-slide">
@@ -562,7 +576,9 @@
                             <div class="reviews-info">
                                 <span class="reviews-name">Диана Баженова</span>
                                 <span class="reviews-country">20 октября 2025</span></div>
-                            <p class="reviews-desc">Сделали визу , быстро , качественно , от меня понадобился минимум документации, даже не ожидала что все произойдет в такие короткие сроки . Сотрудники очень вежливые , всегда помогут и подскажут . Благодарю за работу !</p>
+                            <p class="reviews-desc">Сделали визу , быстро , качественно , от меня понадобился минимум
+                                документации, даже не ожидала что все произойдет в такие короткие сроки . Сотрудники
+                                очень вежливые , всегда помогут и подскажут . Благодарю за работу !</p>
                         </div>
 
                     </div>
@@ -702,7 +718,8 @@
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
                 <div class="contacts-etc">
-                    <a class="contacts-agency" href="t.me/bobriashovmatv"><img src="assets/images/agency.svg" alt=""></a>
+                    <a class="contacts-agency" href="t.me/bobriashovmatv"><img src="assets/images/agency.svg"
+                                                                               alt=""></a>
                     <a href="agree.html">Согласие на обработку персональных данных</a>
                     <a href="politics.html">Политика конфиденциальности</a>
                     <a href="oferta.html">Договор оферта</a>

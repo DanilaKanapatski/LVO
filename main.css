@@ -1,10 +1,5 @@
 /*header*/
 
-html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
 .header-mob {
     display: none;
 }
@@ -626,18 +621,20 @@ html {
 }
 
 .select-wrapper.active .dropdown-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
 }
 
 .dropdown-item {
-    padding: 12px 20px;
+    padding: 8px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 120%;
     color: var(--blue);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-bottom: 1px solid #f0f0f0;
 }
 
 .dropdown-item:last-child {
@@ -2062,28 +2059,11 @@ html {
     .header {
         display: none;
     }
-    .header-mob {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        padding: 0 16px; /* Отступы слева и справа */
-        background: transparent; /* Убираем фон у родителя */
-    }
 
     .header-mob .container {
-        background: var(--white);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        padding: 12px 16px;
-        display: flex;
-        justify-content: space-between;
-        /*max-width: 450px;*/
-        margin: 0 auto; /* Центрируем */
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
+        width: calc(100% - 32px);
+        left: auto;
+        transform: none;
     }
 
     .header-mob img {
@@ -2217,7 +2197,8 @@ html {
         font-size: 30px;
         line-height: 100%;
         color: var(--white);
-        max-width: 381px;
+        max-width: none;
+        padding-right: 12px;
     }
 
     .main-btn {
@@ -2319,7 +2300,6 @@ html {
         border-radius: 10px;
         padding: 10px 20px;
         height: 52px;
-        width: 100%;
     }
 
     .form-btn {

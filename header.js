@@ -85,6 +85,25 @@ overlay.addEventListener('click', function() {
     }, 300);
 });
 
+// Функция для фильтрации стран
+function filterCountries(searchTerm) {
+    const items = document.querySelectorAll('.dropdown-list .dropdown-item');
+    const searchLower = searchTerm.toLowerCase().trim();
+
+    items.forEach(item => {
+        // Пропускаем контейнер поиска
+        if (item.classList.contains('search-container')) return;
+
+        const countryName = item.textContent.toLowerCase();
+
+        if (searchTerm === '' || countryName.includes(searchLower)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+
 // Функция для открытия/закрытия выпадающего списка
 function toggleDropdown(element) {
     const wrapper = element.closest('.select-wrapper');
@@ -99,15 +118,34 @@ function toggleDropdown(element) {
 
     // Переключаем текущий список
     wrapper.classList.toggle('active');
+
+    // Фокус на поле поиска при открытии и сброс фильтра
+    if (wrapper.classList.contains('active')) {
+        const searchInput = wrapper.querySelector('.country-search');
+        if (searchInput) {
+            searchInput.value = '';
+            filterCountries(''); // Сбрасываем фильтр
+            setTimeout(() => {
+                searchInput.focus();
+            }, 100);
+        }
+    }
 }
 
 // Функция для выбора страны
 function selectCountry(element, country) {
     const wrapper = element.closest('.select-wrapper');
-    const input = wrapper.querySelector('input');
+    const input = wrapper.querySelector('.select-trigger input');
 
     // Устанавливаем выбранное значение
     input.value = country;
+
+    // Сбрасываем поиск
+    const searchInput = wrapper.querySelector('.country-search');
+    if (searchInput) {
+        searchInput.value = '';
+        filterCountries(''); // Показываем все страны
+    }
 
     // Убираем выделение со всех элементов
     wrapper.querySelectorAll('.dropdown-item').forEach(item => {
@@ -120,7 +158,6 @@ function selectCountry(element, country) {
     // Закрываем выпадающий список
     wrapper.classList.remove('active');
 
-    // Можно добавить обработку выбора страны
     console.log('Выбрана страна:', country);
 }
 
@@ -142,28 +179,14 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Функция для фильтрации стран (опционально)
-function filterCountries(searchTerm) {
-    const items = document.querySelectorAll('.dropdown-item');
-    items.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (text.includes(searchTerm.toLowerCase())) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-
-// Если нужно сделать поиск по странам, можно добавить обработчик:
-document.querySelector('.select-trigger input').addEventListener('input', function(e) {
-    if (!e.target.closest('.select-wrapper').classList.contains('active')) {
-        toggleDropdown(e.target.closest('.select-trigger'));
+// Предотвращаем закрытие при клике на поле поиска
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('country-search')) {
+        event.stopPropagation();
     }
-    filterCountries(e.target.value);
 });
 
-// Добавляем обработчик для изменения класса
+// Добавляем обработчик для изменения класса даты
 document.querySelectorAll('.date-input').forEach(input => {
     input.addEventListener('input', function() {
         if (this.value) {
