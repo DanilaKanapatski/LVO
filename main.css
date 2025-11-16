@@ -687,7 +687,7 @@
 }
 
 .date-input:not(.placeholder-shown) {
-    color: var(--blue);
+    color: var(--light-blue);
 }
 
 .date-input::placeholder {
@@ -742,6 +742,46 @@
     }
 }
 
+
+.date-input-wrapper {
+    position: relative;
+}
+
+.date-placeholder {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-blue);
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.date-input:not(:placeholder-shown) + .date-placeholder,
+.date-input:focus + .date-placeholder {
+    opacity: 0;
+}
+
+/* Исправляем выравнивание на iOS */
+.date-input {
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 50px;
+}
+
+/* Для Safari iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+    .date-input {
+        text-align: left;
+        padding-left: 16px;
+    }
+
+    .date-input::-webkit-date-and-time-value {
+        text-align: left;
+        margin-left: 0;
+    }
+}
 .calculator-btn {
     margin-top: 10px;
     font-weight: 400;

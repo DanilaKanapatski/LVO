@@ -186,19 +186,33 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Добавляем обработчик для изменения класса даты
+// Обработчик для поля даты
 document.querySelectorAll('.date-input').forEach(input => {
+    const placeholder = input.nextElementSibling;
+
     input.addEventListener('input', function() {
         if (this.value) {
-            this.classList.remove('placeholder-shown');
+            placeholder.style.opacity = '0';
         } else {
-            this.classList.add('placeholder-shown');
+            placeholder.style.opacity = '1';
+        }
+    });
+
+    input.addEventListener('focus', function() {
+        placeholder.style.opacity = '0';
+    });
+
+    input.addEventListener('blur', function() {
+        if (!this.value) {
+            placeholder.style.opacity = '1';
         }
     });
 
     // Инициализация при загрузке
     if (!input.value) {
-        input.classList.add('placeholder-shown');
+        placeholder.style.opacity = '1';
+    } else {
+        placeholder.style.opacity = '0';
     }
 });
 
