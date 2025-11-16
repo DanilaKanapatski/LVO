@@ -206,19 +206,24 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Простой полифилл для плавного скролла
-document.addEventListener('DOMContentLoaded', function() {
-    // Обработка всех якорных ссылок
+document.addEventListener("DOMContentLoaded", () => {
+    const OFFSET = 80; // высота шапки
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+
+            const target = document.querySelector(this.getAttribute("href"));
+            if (!target) return;
+
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - OFFSET;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
         });
     });
 });
+
