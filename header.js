@@ -205,3 +205,20 @@ window.addEventListener('resize', function() {
         video.poster = 'assets/images/video2.png';
     }
 });
+
+// Простой полифилл для плавного скролла
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработка всех якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});

@@ -139,16 +139,16 @@
                 <source media="(max-width: 1297px)" srcset="assets/images/form-1.png"/>
                 <img src="assets/images/form.png" alt=""/>
             </picture>
-            <form class="form-main" action="">
-                <input type="text" placeholder="Страна">
-                <input type="text" placeholder="Имя">
-                <input type="tel" placeholder="+ 7 (999) 999 99 99">
+            <form class="form-main desktop-form" data-form-type="desktop">
+                <input type="text" name="country" placeholder="Страна" required>
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="tel" name="phone" placeholder="+ 7 (999) 999 99 99" required>
                 <label class="custom-checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" name="agreement" required>
                     <span class="checkmark"></span>
                     Я соглашаюсь с условиями политики конфиденциальности и сбора данных
                 </label>
-                <button class="form-btn">Отправить заявку</button>
+                <button type="submit" class="form-btn">Отправить заявку</button>
             </form>
         </div>
     </section>
@@ -156,16 +156,16 @@
         <div class="container">
             <h2 class="form-title">Получить консультацию</h2>
             <p class="form-desc">Оставьте заявку и мы свяжемся с вами и проконсультируем насчёт визы
-            <form class="form-main" action="">
-                <input type="text" placeholder="Страна">
-                <input type="text" placeholder="Имя">
-                <input type="tel" placeholder="+ 7 (999) 999 99 99">
-            <label class="custom-checkbox">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                Я соглашаюсь с условиями политики конфиденциальности и сбора данных
-            </label>
-                <button class="form-btn">Отправить заявку</button>
+            <form class="form-main mob-form" data-form-type="mobile">
+                <input type="text" name="country" placeholder="Страна" required>
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="tel" name="phone" placeholder="+ 7 (999) 999 99 99" required>
+                <label class="custom-checkbox">
+                    <input type="checkbox" name="agreement" required>
+                    <span class="checkmark"></span>
+                    Я соглашаюсь с условиями политики конфиденциальности и сбора данных
+                </label>
+                <button type="submit" class="form-btn">Отправить заявку</button>
             </form>
         </div>
     </section>
@@ -178,16 +178,16 @@
                         <p>Быстрое оформление документов</p>
                     </li>
                     <li>
-                        <p>Если вы не получите визу — мы вернём вам деньги</p>
+                        <p>Если Вы не получаете визу - мы вернем деньги</p>
                     </li>
                     <li>
-                        <p>Соберём документы за вас </p>
+                        <p>Заполним документы за Вас</p>
                     </li>
                     <li>
-                        <p>Производите оплату банковской картой на сайте,</p>
+                        <p>Всё оформим онлайн</p>
                     </li>
                     <li>
-                        <p>Получаете визу на свой E-mail.</p>
+                        <p>Рассрочка без переплат</p>
                     </li>
                 </ul>
             </div>
@@ -261,7 +261,7 @@
                 </li>
                 <li class="hidden-mobile">
                     <picture>
-                        <source media="(max-width: 1297px)" srcset="assets/images/directions-4.png"/>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-5.png"/>
                         <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
                         <img src="assets/images/directions-5.png" alt=""/>
                     </picture>
@@ -275,7 +275,7 @@
                 </li>
                 <li class="hidden-mobile">
                     <picture>
-                        <source media="(max-width: 1297px)" srcset="assets/images/directions-4.png"/>
+                        <source media="(max-width: 1297px)" srcset="assets/images/directions-6.png"/>
                         <!--                <source media="(min-width: 800px)" srcset="elva-800w.jpg" />-->
                         <img src="assets/images/directions-6.png" alt=""/>
                     </picture>
@@ -495,6 +495,12 @@
                             <p class="team-name">Дмитрий</p>
                             <p class="team-profession">С LVO до мира один шаг</p></div>
                     </div>
+                    <div class="team-slide swiper-slide">
+                        <img src="assets/images/team-6.png" alt="Лев Грязных">
+                        <div class="team-wrapper">
+                            <p class="team-name">Виталий</p>
+                            <p class="team-profession">Когда люди смотрят на летящих в небе птиц,их всякий раз тянет отправиться в путешествие</p></div>
+                    </div>
                 </div>
 
                 <!-- Кнопки навигации -->
@@ -707,6 +713,7 @@
 </main>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="header.js"></script>
+<script src="send.js"></script>
 <script src="team.js"></script>
 <script src="reviews.js"></script>
 </body>
