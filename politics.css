@@ -340,7 +340,7 @@
     .table-wrapper table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 800px; /* Минимальная ширина для скролла */
+        min-width: 1000px; /* Минимальная ширина для скролла */
     }
 
     .table-wrapper td {
