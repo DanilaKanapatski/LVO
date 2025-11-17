@@ -130,3 +130,265 @@
 .table-center {
     border-right: 1px solid rgba(0, 0, 0, 0.6);
 }
+
+@media screen and (max-width: 1297px) {
+    .politics {
+        padding-top: 60px;
+    }
+
+    .politics-title {
+        font-size: 36px;
+    }
+
+    .politics-list {
+        margin-top: 25px;
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .politics-list li {
+        margin-left: 25px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .politics-list ol {
+        margin-top: 12px;
+        margin-left: -20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .politics-list ol li {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .politics-list ol li ol {
+        margin-left: 0;
+    }
+
+    .politics-list ul {
+        margin-top: 12px;
+        margin-left: -25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: initial;
+    }
+
+    .table-wrapper {
+        margin-top: 25px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        overflow: hidden;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .table-wrapper table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table-wrapper td {
+        padding: 12px;
+        vertical-align: top;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-header {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .table-left {
+        width: 25%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-right-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000;
+
+    }
+
+    .table-left-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000;
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-center-title {
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .table-wrapper tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table-center {
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .politics {
+        padding-top: 70px;
+
+    }
+
+    .politics .container {
+        border-radius: 10px;
+        padding: 32px 24px;
+        background: var(--white);
+    }
+
+    .politics-title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        color: var(--blue);
+    }
+
+    .politics-list {
+        margin-top: 14px;
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .politics-list li {
+        margin-left: 25px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .politics-list ol {
+        margin-top: 12px;
+        margin-left: -20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .politics-list ol li {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .politics-list ol li ol {
+        margin-left: -8px;
+    }
+
+    .politics-list ul {
+        margin-top: 12px;
+        margin-left: -25px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: initial;
+    }
+
+    .table-wrapper {
+        margin-top: 15px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        overflow: hidden;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+    }
+
+    .table-wrapper table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 700px; /* Минимальная ширина для скролла */
+    }
+
+    .table-wrapper td {
+        padding: 10px;
+        vertical-align: top;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-header {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .table-left {
+        width: 25%;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.6);
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-right-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+
+    }
+
+    .table-left-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    .table-center-title {
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    .table-wrapper tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table-center {
+        border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+}

@@ -1,5 +1,5 @@
 new Swiper('.team-slider', {
-    loop: true,
+    // loop: true,
     slidesPerView: 2, // Показываем два слайда
     slidesPerGroup: 1, // Добавьте это - переключаем по одному слайду
     spaceBetween: 12, // Расстояние между слайдами
