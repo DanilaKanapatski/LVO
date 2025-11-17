@@ -327,14 +327,17 @@
         font-size: 14px;
         line-height: 120%;
         color: rgba(0, 0, 0, 0.6);
+        /* ОСНОВНЫЕ ИСПРАВЛЕНИЯ ДЛЯ iOS */
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+        -webkit-overflow-scrolling: touch;
+        display: block; /* Важно для iOS */
+        position: relative;
     }
 
     .table-wrapper table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 700px; /* Минимальная ширина для скролла */
+        min-width: 800px; /* Минимальная ширина для скролла */
     }
 
     .table-wrapper td {
