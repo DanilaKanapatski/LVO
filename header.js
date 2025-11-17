@@ -186,35 +186,22 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Обработчик для поля даты
 document.querySelectorAll('.date-input').forEach(input => {
-    const placeholder = input.nextElementSibling;
 
-    input.addEventListener('input', function() {
-        if (this.value) {
-            placeholder.style.opacity = '0';
+    function update() {
+        if (input.value) {
+            input.classList.add("has-value");
         } else {
-            placeholder.style.opacity = '1';
+            input.classList.remove("has-value");
         }
-    });
-
-    input.addEventListener('focus', function() {
-        placeholder.style.opacity = '0';
-    });
-
-    input.addEventListener('blur', function() {
-        if (!this.value) {
-            placeholder.style.opacity = '1';
-        }
-    });
-
-    // Инициализация при загрузке
-    if (!input.value) {
-        placeholder.style.opacity = '1';
-    } else {
-        placeholder.style.opacity = '0';
     }
+
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+
+    update(); // при загрузке
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('myVideo');

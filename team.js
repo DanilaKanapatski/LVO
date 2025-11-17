@@ -1,6 +1,6 @@
 new Swiper('.team-slider', {
-    // loop: true,
-    slidesPerView: 2, // Показываем два слайда
+    loop: true,
+    // slidesPerView: 2, // Показываем два слайда
     slidesPerGroup: 1, // Добавьте это - переключаем по одному слайду
     spaceBetween: 12, // Расстояние между слайдами
     navigation: {
@@ -20,7 +20,22 @@ new Swiper('.team-slider', {
         757: {
             slidesPerView: 3,
             spaceBetween: 12
-        }
+        },
+        576: {
+            slidesPerView: 2.2,
+            spaceBetween: 12,
+        },
+
+        420: {
+            slidesPerView: 1.8,
+            spaceBetween: 12,
+        },
+
+        320: {
+            slidesPerView: 1.4,
+            spaceBetween: 10,
+        },
+
     }
 });
 //
