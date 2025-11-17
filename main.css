@@ -264,6 +264,14 @@
 
 }
 
+.form-main .custom-checkbox a {
+    text-decoration: underline;
+}
+
+.custom-checkbox a {
+    text-decoration: underline;
+}
+
 .form-btn {
     margin-top: 8px;
     font-weight: 400;

@@ -60,12 +60,15 @@
 }
 
 .table-wrapper {
+    margin-top: 25px;
     width: 100%;
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     overflow: hidden;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .table-wrapper table {
@@ -74,26 +77,56 @@
 }
 
 .table-wrapper td {
-    padding: 14px;
+    padding: 15px;
     vertical-align: top;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .table-header {
-    font-weight: bold;
-    background: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
 }
 
 .table-left {
     width: 25%;
-    font-weight: 600;
-    border-right: 1px solid #000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .table-right-title {
     font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
+
+}
+
+.table-left-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.table-center-title {
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
 }
 
 .table-wrapper tr:last-child td {
     border-bottom: none;
+}
+
+.table-center {
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
 }
