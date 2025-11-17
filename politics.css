@@ -332,6 +332,9 @@
         -webkit-overflow-scrolling: touch;
         display: block; /* Важно для iOS */
         position: relative;
+        touch-action: pan-x pan-y; /* ВАЖНО! */
+        -webkit-text-size-adjust: 100%; /* отключает автоматическое увеличение шрифта */
+        text-size-adjust: 100%;
     }
 
     .table-wrapper table {
